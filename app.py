@@ -10,10 +10,13 @@ tree = html.fromstring(page.content)
 
 curr_name = tree.xpath('//a[@class="currency-name-container link-secondary"]/text()')
 curr_price = tree.xpath('//a[@class="price"]/text()')
+curr_volume = tree.xpath('//a[@class="volume"]/text()')
+curr_change = tree.xpath('//td[@class="no-wrap percent-change  text-right negative_change"]/text()')
+
 
 # making a dictionary on gatherd data
-paired_dict = list(zip(curr_name,curr_price))
+paired_list = list(zip(curr_name,curr_price))
 
-tabulate_table = tabulate(paired_dict,headers=["Currency", "Price"])
+tabulate_table = tabulate(paired_list,headers=["Currency", "Price","Volume", "Change (24h)"])
 print(tabulate_table)
 
