@@ -1,3 +1,3 @@
-# Crypto-Currency price chart: 
+# Analyze Crypto-Data
 
-You can gather and print data of of 100 popular crypto-currencies 
+With this simple application, You can gather upto 100 popular crypto currency data and table into CLI without any API
